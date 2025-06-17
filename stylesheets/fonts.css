@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'TT Barrels';
+  src: url('../fonts/TT_Barrels/TT-Barrels-DemiBold.ttf') format('truetype'),
+    url('../fonts/TT_Barrels/TT-Barrels-DemiBold.otf') format('opentype'),
+    url('../fonts/TT_Barrels/TT_Barrels_DemiBold.woff') format('woff'),
+    url('../fonts/TT_Barrels/TT_Barrels_DemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'TT Commons Pro';
+  src: url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Medium.ttf')
+      format('truetype'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Medium.otf') format('opentype'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Medium.woff') format('woff'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'TT Commons Pro';
+  src: url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Normal.ttf')
+      format('truetype'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Normal.otf') format('opentype'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Normal.woff') format('woff'),
+    url('../fonts/TT_Commons_Pro/TT-Commons-Pro-Normal.woff2') format('woff2');
+  font-weight: 300;
+}

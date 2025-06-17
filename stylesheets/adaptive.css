@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px) {
+  .page {
+    flex-direction: column;
+  }
+  .left-page,
+  .right-page {
+    width: 100%;
+    border-right: none;
+  }
+  .page h3 {
+    text-align: center;
+    font-size: 12px;
+  }
+  .page p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .page blockquote + p {
+    text-align: right;
+  }
+  blockquote {
+    text-align: center;
+    font-size: 16px;
+  }
+}
