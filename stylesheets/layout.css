@@ -3,12 +3,8 @@
   box-sizing: border-box;
 }
 :root {
-  --pink: #ff35ac;
+  --green: #899770;
   --black: #252525;
-  --dark-gray: #515151;
-  --middle-gray: #959595;
-  --light-gray: #e4e4e4;
-  --text-stroke-width: 0.0694vw;
 }
 body {
   background-color: white;
@@ -23,10 +19,12 @@ h1 {
   text-transform: uppercase;
 }
 h2,
-blockquote {
+blockquote,
+header a {
   font-family: 'TT Commons Pro', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
+  font-size: 1.4;
   /* font-weight: 300; */
 }
 blockquote {
@@ -49,8 +47,8 @@ h3 {
   line-height: 1.4;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--middle-gray);
-  font-size: 0.8vw;
+  color: var(--green);
+  font-size: 1vw;
 }
 h4 {
   font-family: 'TT Commons Pro', sans-serif;
@@ -63,11 +61,44 @@ a {
   font-family: 'TT Commons Pro', sans-serif;
   line-height: 1.2;
   font-weight: 500;
-  color: black;
+  color: var(--black);
   font-size: 1.4vw;
 }
 
 /* главная */
+header {
+  display: flex;
+  flex-direction: column;
+  /* border-bottom: 2px solid var(--black); */
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--black);
+}
+.logo {
+  width: 10%;
+  padding: 1vw;
+  border-right: 2px solid var(--black);
+}
+.logo-picture {
+  width: 100%;
+}
+nav {
+  display: flex;
+  width: 70%;
+  gap: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  transition: color ease 0.4s;
+}
+nav a:hover {
+  color: var(--green);
+  transition: color ease 0.6s;
+}
 .wrapper {
   padding-top: 1%;
   padding-bottom: 2%;
@@ -104,32 +135,14 @@ a {
   width: 200%;
   animation: marquee 30s linear infinite;
 }
-header {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 2px solid black;
-}
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid black;
-}
-.logo {
-  width: 15%;
-  padding: 1vw;
-  border-right: 2px solid black;
-}
-.logo-picture {
-  width: 100%;
-}
 
 /* фотоальбом */
 .main {
-  border: 2px solid black;
+  border: 2px solid var(--black);
 }
 .page {
   display: flex;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--black);
 }
 .left-page,
 .right-page {
@@ -142,7 +155,7 @@ header {
   gap: 1vw;
 }
 .left-page {
-  border-right: 2px solid black;
+  border-right: 2px solid var(--black);
 }
 .left-page.many {
   flex-direction: row;
@@ -150,7 +163,7 @@ header {
 .left-page.many img {
   width: 49%;
 }
-.photobook .right-page {
+.right-page {
   gap: 6vw;
 }
 .page img {
@@ -159,13 +172,6 @@ header {
 .page h3,
 .page p {
   width: 100%;
-}
-.page h3 {
-  color: var(--middle-gray);
-  font-size: 0.8vw;
-}
-.page p {
-  font-size: 1.4vw;
 }
 
 /* москва-париж */
@@ -196,6 +202,96 @@ header {
   bottom: 1px !important;
 }
 #moskva .page {
-  border-right: 2px solid black;
+  border-right: 2px solid var(--black);
   height: 135%;
+}
+.none {
+  display: none;
+}
+#moskva img {
+  position: relative;
+}
+#moskva img:hover + img {
+  width: 90%;
+  display: block;
+  position: absolute;
+  z-index: 99999 !important;
+  transform: translate3d(0px, 0, 0);
+}
+.hide-image1 {
+  left: 14%;
+  top: 20%;
+}
+
+/* перечень публикаций */
+#works section,
+#exhibitions section {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+
+  align-items: center;
+}
+#works section,
+.section-title {
+  justify-content: center;
+}
+.bg-image {
+  transition: opacity ease 0.4s;
+  background-image: url('../images/blue-gold.webp');
+  /* overflow: hidden;
+  filter: blur(2px); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#exhibitions .bg-image {
+  opacity: 1;
+}
+#works section:nth-of-type(1),
+#exhibitions section:nth-of-type(1) {
+  border-right: 2px solid var(--black);
+}
+#works section:hover .bg-image {
+  transition: opacity ease 0.8s;
+  opacity: 1;
+}
+#works section:hover h2 {
+  color: white;
+}
+#exhibitions section h2 {
+  color: white;
+}
+section h2 {
+  position: relative;
+  z-index: 2;
+}
+#works main,
+#exhibitions main {
+  display: flex;
+  height: calc(100% - 80px);
+}
+.exhibitions {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.exhibitions .right-page {
+  border-bottom: 2px solid var(--black);
+}
+section a {
+  text-decoration: none;
+}
+a.right-page {
+  transition: all ease 0.4s;
+}
+a.right-page:hover {
+  transition: all ease 0.6s;
+  background-color: rgb(172, 205, 251);
 }
