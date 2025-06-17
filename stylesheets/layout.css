@@ -20,7 +20,8 @@ h1 {
 }
 h2,
 blockquote,
-header a {
+header a,
+.grid a {
   font-family: 'TT Commons Pro', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
@@ -113,7 +114,7 @@ nav a:hover {
   width: 95%;
   height: 100%;
   margin-left: 2.43%;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   border: 2px solid #fafafa;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -167,7 +168,7 @@ nav a:hover {
   gap: 6vw;
 }
 .page img {
-  width: 90%;
+  width: 100%;
 }
 .page h3,
 .page p {
@@ -221,6 +222,11 @@ nav a:hover {
 .hide-image1 {
   left: 14%;
   top: 20%;
+}
+.page .hide-image2 {
+  width: 30%;
+  left: -14%;
+  top: 5%;
 }
 
 /* перечень публикаций */
@@ -294,4 +300,87 @@ a.right-page {
 a.right-page:hover {
   transition: all ease 0.6s;
   background-color: rgb(172, 205, 251);
+}
+
+/* гоген */
+#gogen .right-page {
+  gap: 3vw;
+  padding-top: 6vw;
+  justify-content: flex-start;
+}
+
+/* главная */
+#index main {
+  height: 100%;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.grid-l {
+  height: 100%;
+  width: 33.3%;
+}
+.grid-l:nth-of-type(1),
+.grid-l:nth-of-type(2) {
+  border-right: 2px solid var(--black);
+}
+.grid-m {
+  height: 66.6%;
+  border-bottom: 2px solid var(--black);
+  border-top: 2px solid var(--black);
+}
+.grid a {
+  display: flex;
+  height: 33.3%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.grid-m a {
+  height: 50%;
+}
+.grid-m h2 {
+  width: 100%;
+  text-align: center;
+  padding: 2vw 0;
+  font-size: 1.4vw;
+}
+.grid-m img {
+  display: none;
+  transition: transform ease 0.4s;
+}
+.grid-m:hover img {
+  display: block;
+}
+.grid img:hover {
+  transform: scale(1.3);
+  transition: transform ease 0.8s;
+}
+.grid a img {
+  width: 50%;
+}
+.grid-m a img {
+  width: 30%;
+}
+/* #index {
+  background-image: url('../images/index/texture-wooden.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#index .main {
+  backdrop-filter: blur(5px);
+} */
+
+#moskva.beuys img {
+  /* max-height: 50%; */
+  max-width: 50%;
+}
+#moskva.beuys .page {
+  height: calc(100%-80px);
+  padding-top: 4vw;
+}
+#moskva.beuys .right-page {
+  gap: 2vw;
 }
