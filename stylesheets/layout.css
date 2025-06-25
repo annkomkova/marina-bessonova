@@ -198,7 +198,11 @@ a {
   width: 49%;
 }
 .right-page {
-  gap: 6vw;
+  gap: 2vw;
+}
+.right-page p + blockquote,
+.right-page h3 + blockquote {
+  margin-top: 4vw;
 }
 .page img {
   width: 100%;
@@ -341,7 +345,7 @@ a.right-page:hover {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50vw;
+  max-height: 50vw;
   cursor: pointer;
 }
 .none {
