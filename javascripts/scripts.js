@@ -3,7 +3,46 @@ document.addEventListener('DOMContentLoaded', () => {
   showPropusk()
   beuys1()
   showArticlesAndExhibitions()
+  showOtherImage()
+  mondrianScale()
 })
+
+function mondrianScale() {
+  const images = document.querySelectorAll('#mondrian img')
+  images.forEach((img) => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('active')
+    })
+  })
+}
+
+function showOtherImage() {
+  const images = document.querySelectorAll('.ch-b-img')
+  images.forEach((img) => {
+    const className = img.classList[1]
+    img.addEventListener('mouseover', () => {
+      document.querySelector(`.${className} + img`).classList.add('visible')
+    })
+
+    document
+      .querySelector(`.${className} + img`)
+      .addEventListener('mouseover', () => {
+        document.querySelector(`.${className} + img`).classList.add('visible')
+      })
+
+    document
+      .querySelector(`.${className} + img`)
+      .addEventListener('mouseout', () => {
+        document
+          .querySelector(`.${className} + img`)
+          .classList.remove('visible')
+      })
+
+    img.addEventListener('mouseout', () => {
+      document.querySelector(`.${className} + img`).classList.remove('visible')
+    })
+  })
+}
 
 function showArticlesAndExhibitions() {
   const articlesNav = document.querySelector('#articles')
@@ -14,10 +53,14 @@ function showArticlesAndExhibitions() {
   articlesNav.addEventListener('click', () => {
     articles.classList.remove('none')
     exhibitions.classList.add('none')
+    exhibitionsNav.classList.add('visible')
+    articlesNav.classList.remove('visible')
   })
   exhibitionsNav.addEventListener('click', () => {
     exhibitions.classList.remove('none')
     articles.classList.add('none')
+    exhibitionsNav.classList.remove('visible')
+    articlesNav.classList.add('visible')
   })
 }
 
@@ -32,8 +75,10 @@ function beuys1() {
 
     if (clck % 2 == 0) {
       image.style.backgroundImage = 'none'
+      image.style.padding = '2vw 0'
     } else {
       image.style.backgroundImage = 'url("images/arts/beuys1.jpg")'
+      image.style.padding = '25vw 0'
     }
   })
 }
