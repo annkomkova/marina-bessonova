@@ -176,14 +176,25 @@ a {
 .btn {
   cursor: pointer;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1vw; */
 }
 .btn img {
   width: 90%;
 }
+.btn h2 {
+  width: 146%;
+  text-align: center;
+  color: var(--mainBG);
+  font-size: 1.2vw;
+}
 .btn.gogen {
   width: 13.5vw;
-  top: 42.24vw;
-  left: 37.05vw;
+  top: 34vw;
+  left: 32vw;
 }
 .btn.urlov {
   width: 15.9vw;
@@ -202,33 +213,63 @@ a {
 }
 .btn.taiti {
   width: 9.2vw;
-  top: 41vw;
-  left: 51.7vw;
+  top: 40vw;
+  left: 54vw;
 }
 .btn.photobook {
   width: 20.76vw;
-  top: 13.06vw;
+  top: 10.5vw;
   left: 37.5vw;
 }
 .btn.beuys {
   width: 12.34vw;
   top: 2.03vw;
-  left: 42.58vw;
+  left: 52vw;
 }
 .btn.mondrian {
   width: 11.8vw;
   top: 22.75vw;
-  left: 16.2vw;
+  left: 20vw;
 }
 .btn.works {
   width: 14vw;
-  top: 36vw;
+  top: 35vw;
   left: 6.22vw;
 }
 .btn.moscou-paris {
   width: 12.2vw;
   top: 3.22vw;
   left: 16.73vw;
+}
+.btn.gogen h2 {
+  transform: rotate(353deg) translate(1vw, -0.2vw);
+}
+.btn.urlov2 h2 {
+  transform: rotate(16deg) translate(-2vw, -0.8vw);
+}
+.btn.bruskin h2 {
+  transform: rotate(12deg) translate(-2vw, -0.4vw);
+}
+.btn.taiti h2 {
+  transform: rotate(8deg) translate(-1vw, -0vw);
+}
+.btn.photobook h2 {
+  transform: rotate(353deg) translate(1.3vw, -0.6vw);
+}
+.btn.beuys h2 {
+  transform: rotate(9deg) translate(-1.2vw, -0.8vw);
+}
+.btn.mondrian h2 {
+  transform: rotate(354deg) translate(1vw, -0vw);
+}
+.btn.works h2 {
+  transform: rotate(355deg) translate(1vw, -0.3vw);
+}
+.btn.moscou-paris h2 {
+  transform: rotate(24deg) translateX(-3vw);
+}
+.btn.gogen img {
+  width: 140%;
 }
 
 /* фотоальбом */
