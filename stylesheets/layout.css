@@ -96,7 +96,9 @@ a {
   height: 100%;
   margin-left: 2.43%;
   border-radius: 20px;
-  background-color: var(--mainBG);
+  /* background-color: var(--mainBG); */
+  background-image: url('../images/index/texture.png');
+  background-size: contain;
   overflow-y: scroll;
   overflow-x: hidden;
 }
