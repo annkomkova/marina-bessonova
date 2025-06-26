@@ -193,7 +193,7 @@ a {
 }
 .btn.gogen {
   width: 13.5vw;
-  top: 34vw;
+  top: 32vw;
   left: 32vw;
 }
 .btn.urlov {
@@ -233,7 +233,7 @@ a {
 }
 .btn.works {
   width: 14vw;
-  top: 35vw;
+  top: 33vw;
   left: 6.22vw;
 }
 .btn.moscou-paris {
@@ -547,4 +547,7 @@ section a {
 }
 #beuys .imgLastik {
   width: 70%;
+}
+.btn .album {
+  width: 80%;
 }
